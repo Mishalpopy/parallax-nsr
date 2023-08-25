@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="parallax.css">
+</head>
+<body>
+    <div class="parallax-3d-hero">
+        <div class="parallax-item p-item1"></div>
+        <div class="parallax-item p-item2"></div>
+        <div class="parallax-item p-item3"></div>
+        <div class="parallax-item p-item4"></div>
+        </div>
+        <div class="container-parallax-3d-hero">
+            <div class="content-header-parallax-3d-hero">
+                <h1>YOUR GUIDING STAR</h1>
+                <h2>The Next Level</h1>
+    
+            </div>
+            <div class="content-parallax-3d-hero">
+                <img src="http://abdulk37.sg-host.com/wp-content/uploads/2023/08/astro.png" alt="">
+            </div>
+        </div>
+    
+      <script >
+        window.onload = function() {
+    
+    window.addEventListener('scroll', function(e) {
+      
+      let s = this.scrollY;
+      let w = this.outerWidth;
+      let h = document.getElementsByClassName('parallax-3d-hero')[0].clientWidth;
+      let h_b = document.getElementsByClassName('container-parallax-3d-hero')[0].clientWidth;
+      let p = s/h*100;
+      let p_b = s/h_b*100;
+      let opas = 1-1/100*p_b;
+      let z_1 = 1 + (w / 10000 * p_b);
+      document.getElementsByClassName('p-item4')[0].style= `transform: scale(${z_1});opacity: ${opas}`;
+      let z_2 = 1+(w/5000000*p);
+      document.getElementsByClassName('p-item1')[0].style= `transform: scale(${z_2})`;
+      let hr = w/2000*p_b;
+      let z_3 = 1+(w*0.000005*p_b);
+      document.getElementsByClassName('p-item2')[0].style= `transform: translate3d(${hr}px,0,0) scale(${z_3})`;
+      let hr_2 = w/1500*p_b;
+      let z_4 = 1+(w*0.00001*p_b);
+      document.getElementsByClassName('p-item3')[0].style= `transform: translate3d(${hr_2}px,0,0) scale(${z_4})`;
+    })
+    
+    }
+      </script>
+    
+
+
+
+
+</body>
+</html>

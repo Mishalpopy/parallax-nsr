@@ -1,0 +1,19 @@
+@keyframes outlineAnimation {
+    0% {
+      opacity: 0;
+      stroke-width: 0;
+    }
+    100% {
+      opacity: 1;
+      stroke-width: 2;
+    }
+  }
+  
+  .animated-path {
+    fill: none;
+    stroke: blue;
+    stroke-width: 0;
+    opacity: 0;
+    animation: outlineAnimation 2s forwards;
+  }
+  
