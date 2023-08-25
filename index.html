@@ -70,9 +70,18 @@
                 headerText.style.opacity = textOpacity;
 
                 // Calculate opacity for the content-parallax-3d-hero section
-                let heroOpacity = 1 - s / (window.innerHeight * 10.5); // Adjust the threshold
+                let heroOpacity = 1 - s / (window.innerHeight * 30.5); // Adjust the threshold
                 let contentParallax3dHero = document.querySelector('.content-parallax-3d-hero');
                 contentParallax3dHero.style.opacity = heroOpacity;
+
+                // Show content-parallax-3d-hero-2 section after scrolling
+                if (s > window.innerHeight * 0.5) {
+                    let contentParallax3dHero2 = document.querySelector('.container-parallax-3d-hero-2');
+                    contentParallax3dHero2.style.opacity = 1;
+                } else {
+                    let contentParallax3dHero2 = document.querySelector('.container-parallax-3d-hero-2');
+                    contentParallax3dHero2.style.opacity = 0;
+                }
 
                 console.log('s:', s);
                 console.log('textTranslateY:', textTranslateY);
