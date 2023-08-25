@@ -108,3 +108,12 @@ body{
 
     width: 100%;
 }
+
+.content-parallax-3d-hero-2{
+    position: relative;
+    z-index: 1;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 100vh;
+  
+}
